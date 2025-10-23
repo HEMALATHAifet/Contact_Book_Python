@@ -1,7 +1,3 @@
-Absolutely ✅ Here’s a **complete, professional GitHub `README.md`** for your **Beginner Python Project – Contact Book (with .txt file storage)** 👇
-
----
-
 ```markdown
 # 📒 Simple Contact Book (Python)
 
