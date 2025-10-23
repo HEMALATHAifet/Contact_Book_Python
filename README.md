@@ -1,5 +1,5 @@
 ```markdown
-# 📒 Simple Contact Book (Python)
+📒 **Simple Contact Book (Python)**
 
 A beginner-friendly **Python console project** to manage your contacts — add, view, search, and delete — all stored in a simple `.txt` file.  
 Perfect for learning **file handling, dictionaries, and basic CRUD operations** in Python.
