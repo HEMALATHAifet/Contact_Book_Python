@@ -36,97 +36,6 @@ Alice Smith,9123456789,[alice@gmail.com](mailto:alice@gmail.com)
 
 ---
 
-## 💻 Code Example
-
-```python
-import os
-
-CONTACT_FILE = "contacts.txt"
-
-def load_contacts():
-    contacts = {}
-    if os.path.exists(CONTACT_FILE):
-        with open(CONTACT_FILE, "r") as file:
-            for line in file:
-                line = line.strip()
-                if line:
-                    name, phone, email = line.split(",")
-                    contacts[name] = {"phone": phone, "email": email}
-    return contacts
-
-def save_contacts(contacts):
-    with open(CONTACT_FILE, "w") as file:
-        for name, info in contacts.items():
-            file.write(f"{name},{info['phone']},{info['email']}\n")
-
-def add_contact(contacts):
-    name = input("Enter name: ").strip().title()
-    phone = input("Enter phone number: ").strip()
-    email = input("Enter email: ").strip().lower()
-    if name in contacts:
-        print("⚠️ Contact already exists!")
-    else:
-        contacts[name] = {"phone": phone, "email": email}
-        print("✅ Contact added successfully!")
-    save_contacts(contacts)
-
-def view_contacts(contacts):
-    if not contacts:
-        print("📭 No contacts found.")
-    else:
-        print("\n📒 Contact List:")
-        for name, info in contacts.items():
-            print(f"- {name}: {info['phone']} | {info['email']}")
-
-def search_contact(contacts):
-    name = input("Enter name to search: ").strip().title()
-    if name in contacts:
-        info = contacts[name]
-        print(f"🔍 {name} → Phone: {info['phone']}, Email: {info['email']}")
-    else:
-        print("❌ Contact not found.")
-
-def delete_contact(contacts):
-    name = input("Enter name to delete: ").strip().title()
-    if name in contacts:
-        del contacts[name]
-        save_contacts(contacts)
-        print("🗑️ Contact deleted successfully!")
-    else:
-        print("❌ Contact not found.")
-
-def main():
-    contacts = load_contacts()
-    while True:
-        print("\n===== 📞 CONTACT BOOK MENU =====")
-        print("1️⃣ Add Contact")
-        print("2️⃣ View Contacts")
-        print("3️⃣ Search Contact")
-        print("4️⃣ Delete Contact")
-        print("5️⃣ Exit")
-
-        choice = input("Choose an option (1-5): ").strip()
-
-        if choice == "1":
-            add_contact(contacts)
-        elif choice == "2":
-            view_contacts(contacts)
-        elif choice == "3":
-            search_contact(contacts)
-        elif choice == "4":
-            delete_contact(contacts)
-        elif choice == "5":
-            print("👋 Exiting Contact Book. Goodbye!")
-            break
-        else:
-            print("⚠️ Invalid choice. Please try again.")
-
-if __name__ == "__main__":
-    main()
-````
-
----
-
 ## 🏗️ How to Run
 
 1. Clone this repository:
@@ -184,13 +93,8 @@ Enter email: alice@gmail.com
 
 ## 👩‍💻 Author
 
-**Hema Bala**
-📫 [Connect on LinkedIn](https://www.linkedin.com/in/your-profile)
+**Hemalatha.A**
+📫 [Connect on LinkedIn](https://www.linkedin.com/in/hemalatha-a-developer/)
 ⭐ If you like this project, give it a star on GitHub!
 
-```
-
----
-
-Would you like me to make a **slightly upgraded version** (with *edit contact* and *input validation*) and update this README for an “Intermediate” version next?
 ```
